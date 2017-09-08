@@ -1,0 +1,196 @@
+Component: ARM Compiler 5.06 update 4 (build 422) Tool: armlink [4d35d2]
+
+==============================================================================
+
+Section Cross References
+
+    startup_mk64f12.o(RESET) refers to startup_mk64f12.o(.text) for Reset_Handler
+    startup_mk64f12.o(.text) refers to startup_mk64f12.o(FlashConfig) for FlashConfig
+    startup_mk64f12.o(.text) refers to system_mk64f12.o(i.SystemInit) for SystemInit
+    startup_mk64f12.o(.text) refers to startup.o(i.init_data_bss) for init_data_bss
+    startup_mk64f12.o(.text) refers to framework.o(Myprog) for __main
+    system_mk64f12.o(i.SystemCoreClockUpdate) refers to system_mk64f12.o(.data) for SystemCoreClock
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(.rev16_text), (4 bytes).
+    Removing startup.o(.revsh_text), (4 bytes).
+    Removing startup.o(.rrx_text), (6 bytes).
+    Removing system_mk64f12.o(.rev16_text), (4 bytes).
+    Removing system_mk64f12.o(.revsh_text), (4 bytes).
+    Removing system_mk64f12.o(.rrx_text), (6 bytes).
+    Removing system_mk64f12.o(i.SystemCoreClockUpdate), (452 bytes).
+    Removing system_mk64f12.o(.data), (4 bytes).
+
+8 unused section(s) (total 484 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section     1024  startup_mk64f12.o(RESET)
+    ..\..\..\Downloads\Framework.s           0x00000000   Number         0  framework.o ABSOLUTE
+    C:\Keil_v5\ARM\PACK\Keil\Kinetis_SDK_DFP\2.2.0\platform\devices\startup.c 0x00000000   Number         0  startup.o ABSOLUTE
+    C:\\Keil_v5\\ARM\\PACK\\Keil\\Kinetis_SDK_DFP\\2.2.0\\platform\\devices\\startup.c 0x00000000   Number         0  startup.o ABSOLUTE
+    RTE\Device\MK64FN1M0VLL12\startup_MK64F12.s 0x00000000   Number         0  startup_mk64f12.o ABSOLUTE
+    RTE\Device\MK64FN1M0VLL12\system_MK64F12.c 0x00000000   Number         0  system_mk64f12.o ABSOLUTE
+    RTE\\Device\\MK64FN1M0VLL12\\system_MK64F12.c 0x00000000   Number         0  system_mk64f12.o ABSOLUTE
+    .text                                    0x00000400   Section       56  startup_mk64f12.o(.text)
+    $v0                                      0x00000400   Number         0  startup_mk64f12.o(.text)
+    Myprog                                   0x00000438   Section      456  framework.o(Myprog)
+    $v0                                      0x00000438   Number         0  framework.o(Myprog)
+    i.SystemInit                             0x00000600   Section        0  system_mk64f12.o(i.SystemInit)
+    i.init_data_bss                          0x0000062c   Section        0  startup.o(i.init_data_bss)
+    FlashConfig                              0x00000674   Section       16  startup_mk64f12.o(FlashConfig)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    __main                                   0x00000439   Thumb Code     0  framework.o(Myprog)
+    init_data_bss                            0x0000062d   Thumb Code    54  startup.o(i.init_data_bss)
+    Image$$RW_m_data$$Base                    - Undefined Reference
+    Image$$VECTOR_RAM$$Base                   - Undefined Reference
+    Image$$VECTOR_ROM$$Base                   - Undefined Reference
+    __Vectors_Size                           0x00000400   Number         0  startup_mk64f12.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_mk64f12.o(RESET)
+    __Vectors_End                            0x00000400   Data           0  startup_mk64f12.o(RESET)
+    Image$$ARM_LIB_STACK$$ZI$$Limit           - Undefined Reference
+    SystemInit                               0x00000601   Thumb Code    34  system_mk64f12.o(i.SystemInit)
+    Reset_Handler                            0x00000401   Thumb Code    18  startup_mk64f12.o(.text)
+    NMI_Handler                              0x00000413   Thumb Code     2  startup_mk64f12.o(.text)
+    HardFault_Handler                        0x00000415   Thumb Code     2  startup_mk64f12.o(.text)
+    MemManage_Handler                        0x00000417   Thumb Code     2  startup_mk64f12.o(.text)
+    BusFault_Handler                         0x00000419   Thumb Code     2  startup_mk64f12.o(.text)
+    UsageFault_Handler                       0x0000041b   Thumb Code     2  startup_mk64f12.o(.text)
+    SVC_Handler                              0x0000041d   Thumb Code     2  startup_mk64f12.o(.text)
+    DebugMon_Handler                         0x0000041f   Thumb Code     2  startup_mk64f12.o(.text)
+    PendSV_Handler                           0x00000421   Thumb Code     2  startup_mk64f12.o(.text)
+    SysTick_Handler                          0x00000423   Thumb Code     2  startup_mk64f12.o(.text)
+    ADC0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    ADC1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CAN0_Bus_Off_IRQHandler                  0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CAN0_Error_IRQHandler                    0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CAN0_ORed_Message_buffer_IRQHandler      0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CAN0_Rx_Warning_IRQHandler               0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CAN0_Tx_Warning_IRQHandler               0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CAN0_Wake_Up_IRQHandler                  0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CMP0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CMP1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CMP2_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    CMT_IRQHandler                           0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DAC0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DAC1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA10_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA11_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA12_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA13_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA14_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA15_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA2_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA3_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA4_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA5_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA6_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA7_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA8_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA9_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DMA_Error_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    DefaultISR                               0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    ENET_1588_Timer_IRQHandler               0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    ENET_Error_IRQHandler                    0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    ENET_Receive_IRQHandler                  0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    ENET_Transmit_IRQHandler                 0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    FTFE_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    FTM0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    FTM1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    FTM2_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    FTM3_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    I2C0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    I2C1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    I2C2_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    I2S0_Rx_IRQHandler                       0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    I2S0_Tx_IRQHandler                       0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    LLWU_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    LPTMR0_IRQHandler                        0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    LVD_LVW_IRQHandler                       0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    MCG_IRQHandler                           0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    MCM_IRQHandler                           0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PDB0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PIT0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PIT1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PIT2_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PIT3_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PORTA_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PORTB_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PORTC_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PORTD_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    PORTE_IRQHandler                         0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    RNG_IRQHandler                           0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    RTC_IRQHandler                           0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    RTC_Seconds_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    Read_Collision_IRQHandler                0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    Reserved71_IRQHandler                    0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    SDHC_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    SPI0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    SPI1_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    SPI2_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    SWI_IRQHandler                           0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART0_ERR_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART0_LON_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART0_RX_TX_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART1_ERR_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART1_RX_TX_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART2_ERR_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART2_RX_TX_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART3_ERR_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART3_RX_TX_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART4_ERR_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART4_RX_TX_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART5_ERR_IRQHandler                     0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    UART5_RX_TX_IRQHandler                   0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    USB0_IRQHandler                          0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    USBDCD_IRQHandler                        0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    WDOG_EWM_IRQHandler                      0x00000425   Thumb Code     0  startup_mk64f12.o(.text)
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000684, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000684, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000400   Data   RO           70    RESET               startup_mk64f12.o
+    0x00000400   0x00000038   Code   RO           72  * .text               startup_mk64f12.o
+    0x00000438   0x000001c8   Code   RO            1  * Myprog              framework.o
+    0x00000600   0x0000002c   Code   RO           80    i.SystemInit        system_mk64f12.o
+    0x0000062c   0x00000048   Code   RO            9    i.init_data_bss     startup.o
+    0x00000674   0x00000010   Data   RO           71    FlashConfig         startup_mk64f12.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region ER_ZI (Base: 0x20000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
